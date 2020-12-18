@@ -1,6 +1,6 @@
 import React, { useReducer } from "react";
 import { alertReducer } from "./alertReducer";
-import { HIDE_ALERT, SHOW_ALERT } from "../alertTypes";
+import { HIDE_ALERT, SHOW_ALERT } from "../types";
 import { AlertContext } from "./AlertContext";
 
 export const AlertState = ({ children }) => {
