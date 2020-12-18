@@ -7,7 +7,7 @@ export const Cards = ({ user }) => (
     <div className="card-body">
       <h5 className="card-title">{user.login}</h5>
       <Link to={"/profile/" + user.login} className="btn btn-primary">
-        Открыть
+        OPEN
       </Link>
     </div>
   </div>
