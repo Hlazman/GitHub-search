@@ -1,1 +1,1 @@
-# react-hooks
+# GitHub search app using React
