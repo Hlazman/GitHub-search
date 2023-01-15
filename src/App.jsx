@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 import { Navigation } from "./components/Navigation";
 import { Home } from "./pages/Home";
 import { About } from "./pages/About";
@@ -12,7 +12,7 @@ function App() {
   return (
     <GithubState>
       <AlertState>
-        <BrowserRouter>
+        <HashRouter>
           <Navigation />
           <div className="container pt-4">
             <Alert alert={{ text: "Test alert" }} />
@@ -22,7 +22,7 @@ function App() {
               <Route path="/profile/:name" component={Profile} />
             </Switch>
           </div>
-        </BrowserRouter>
+        </HashRouter>
       </AlertState>
     </GithubState>
   );
