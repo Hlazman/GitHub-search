@@ -1,4 +1,4 @@
-# Game: GitHub serch account
+# Game: GitHub serch user
 **DEMO LINK**: https://hlazman.github.io/react_gh-search/
 
 **Used technologies**: React, JS, HTML5, CSS3(Scss).
