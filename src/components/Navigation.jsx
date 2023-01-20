@@ -6,7 +6,7 @@ export const Navigation = () => (
     <div className="navbar-brand">GitHub search</div>
     <ul className="navbar-nav">
       <li className="nav-item">
-        <NavLink exact to="/" className="nav-link">
+        <NavLink to="/" className="nav-link">
           HOME
         </NavLink>
       </li>

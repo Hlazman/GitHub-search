@@ -1,15 +1,15 @@
 import React, { Fragment, useContext, useEffect } from "react";
 import { GithubContext } from "../context/github/GithubContext";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Repos } from "../components/Repos";
 
 export const Profile = ({ match }) => {
   const { getUser, getRepos, loading, user, repos } = useContext(GithubContext);
-  const urlName = match.params.name;
+  const { name: prifile } = useParams();
 
   useEffect(() => {
-    getUser(urlName);
-    getRepos(urlName);
+    getUser(prifile);
+    getRepos(prifile);
     // eslint-disable-next-line
   }, []);
 
@@ -42,8 +42,8 @@ export const Profile = ({ match }) => {
         <div className="card-body">
           <div className="row">
             <div className="col-sm-3 text-center">
-              <img src={avatar_url} alt={name} style={{ width: "150px" }} />
-              <h1>{name}</h1>
+              <img className="shadow rounded" src={avatar_url} alt={name} style={{ width: "250px" }} />
+              <h1 className="mt-4" style={{ fontSize: "30px" }}>{name}</h1>
               {location && <p> Location: {location}</p>}
             </div>
             <div className="col">
@@ -53,11 +53,11 @@ export const Profile = ({ match }) => {
                   <p>{bio}</p>
                 </Fragment>
               )}
-              <a
+              <a 
                 href={html_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-dark"
+                className="btn btn-dark mb-3"
               >
                 Open Profile
               </a>
@@ -81,9 +81,9 @@ export const Profile = ({ match }) => {
                 )}
               </ul>
 
-              <div className="badge badge-primary"> Followers: {followers}</div>
-              <div className="badge badge-success"> Following: {following}</div>
-              <div className="badge badge-info">
+              <div className="badge badge-primary mr-2"> Followers: {followers}</div>
+              <div className="badge badge-success mr-2"> Following: {following}</div>
+              <div className="badge badge-info mr-2">
                 {" "}
                 Repository: {public_repos}
               </div>

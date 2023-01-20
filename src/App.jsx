@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter, Switch, Route } from "react-router-dom";
+import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 import { Navigation } from "./components/Navigation";
 import { Home } from "./pages/Home";
 import { About } from "./pages/About";
@@ -16,11 +16,12 @@ function App() {
           <Navigation />
           <div className="container pt-4">
             <Alert alert={{ text: "Test alert" }} />
-            <Switch>
-              <Route path="/" exact component={Home} />
-              <Route path="/about" component={About} />
-              <Route path="/profile/:name" component={Profile} />
-            </Switch>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/home" element={<Navigate to="/" replace />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/profile/:name" element={<Profile />} />
+            </Routes>
           </div>
         </HashRouter>
       </AlertState>
