@@ -1,7 +1,7 @@
 # Game: GitHub serch user
 **DEMO LINK**: https://hlazman.github.io/react_gh-search/
 
-**Used technologies**: React, JS, HTML5, CSS3(Scss).
+**Used technologies**: React, JS, HTML5, CSS3(SCSS).
 
 **Dependencies**: axios, bootstrap, node-sass, react, react-dom, react-router-dom, react-scripts
 
